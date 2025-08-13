@@ -1,5 +1,12 @@
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Hintergrund}{1}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Verhaltensökonomische Grundlagen}{1}{chapter.3}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{2}{chapter*.2}%
+\contentsline {chapter}{\numberline {4}Methodik}{1}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Versuchsziel und Hypothesen}{1}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Versuchsaufbau}{2}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Begründung für den Versuchsaufbau}{3}{section.4.3}%
+\contentsline {chapter}{\numberline {A}Framing Nachrichten}{3}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Gewinn-Framing Nachricht Gruppe 1}{4}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Verlust-Framing Nachricht Gruppe 2}{4}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Dramatisierte Verlust-Framing Nachricht Gruppe 3}{4}{section.A.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

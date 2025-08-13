@@ -20,14 +20,10 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
   bindingoffset=10mm]{geometry}		% Seitenränder und Bindungskorrektur einstellen
   
 \usepackage{apacite} 				% Literatur-Referenzen: American Psycholog. Assoc.
-\usepackage{natbib}					
-
-\setcitestyle{round,aysep={}} 		% Indizierg. in runden Klammern, zw. Autor u. Jahr
 \usepackage[utf8]{inputenc}         % Umlaute im Text
 \usepackage{ngerman}				% Rechtschreibg.
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}				% Schriftfamilie
-\usepackage{microtype}				% für die Mikrotypografie (besseres Schriftbild)
 \setkomafont{disposition}{\bfseries}
 
 \usepackage{graphicx} 				% Grafiken einfügen (pdf,png - aber jpg vermeiden)
@@ -48,12 +44,11 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 \usepackage{listings}				% Algorithmen
 
 \usepackage{mdwlist}				% Listen
+\usepackage{enumitem}               % Customizable lists
 
 \usepackage{setspace} 				% Zeileneinstellung
 \newtheorem{mydef}{Merksatz}  		% Falls Beispiele, Merksätze m. fortl. Nr. gebr. werden
 \newtheorem{bsp}{Beispiel}
-
-\usepackage{todonotes}				% zum Erstellen von ToDos im Editor
 
 \usepackage{lscape}					% zum Rotieren von Seiten
 
@@ -61,9 +56,9 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 
 \usepackage{calc}
 
-\usepackage{footnote}				% Fußnoten
+\usepackage{footnote}				% Fußnoten (entfernt wegen Konflikt mit microtype)
 \usepackage{tablefootnote}			% Fußnoten in Tabellen
-
+\usepackage{cleveref}
 %\clubpenalty = 10000
 %\widowpenalty = 10000 \displaywidowpenalty = 10000
 
@@ -86,9 +81,76 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 \chapter{Einleitung}
 \chapter{Hintergrund}
 \chapter{Verhaltensökonomische Grundlagen}
+\chapter{Methodik}
+Das folgende Kapitel erläutert den experimentellen Aufbau zum Ermitteln des Framingeffekts.
+Dazu wird zunächst das Versuchsziel und die Hypothesen formuliert, bevor der konkrete Versuchsaufbau beschrieben wird.
+Zuletzt wird der konkrete Ablauf des Experiments dargestellt.
+\section{Versuchsziel und Hypothesen}
+Bei dem Experiment handelt es sich um eine Online Studie. 
+Das Ziel ist zu untersuchen welchen Einfluss Framing auf die Risikowahrnehmung 
+und die Handlungsbereitschaft in Bezug auf den Klimawandel hat.
+\begin{enumerate}[label=\textbf{H\arabic*:}, leftmargin=*]
+  \item Verlust-Framing führt zu einer höheren wahrgenommene Bedrohung durch den Klimawandel als Gewinn-Framing.
+  \item Eine zu starke Dramatisierung führt zu einem starken Verlust der Glaubwürdigkeit und zur Nichtbeeinflussung der Probanden.
+\end{enumerate}
+
+\section{Versuchsaufbau}
+Die Probanden werden zu Beginn der Teilnahme in eine von drei Gruppen eingeteilt.
+Die erste Gruppe erhält eine Verlust-Framing Nachricht, die zweite Gruppe eine Gewinn-Framing Nachricht und  die dritte Gruppe eine dramatisierte Form der Verlust-Framing Nachricht. Dramatisiert in diesem Kontext bedeutet, dass die Verlust-Framing Nachricht starke emotionale Sprache verwendet und Effekte des Klimawandels hyperbolisiert.
+Im Kontrast dazu sind die Nachrichten der ersten beiden Gruppen sachlicher und weniger emotional.
+Die Nachricht der ersten Gruppe formuliert Klimawandel als Möglichkeit in Gemeinschaft die Welt neu zu gestalten.
+Gruppe zwei erhält eine Nachricht, die Maßnahmen fordert und dem Lesenden sachlich aber deutlich darstellt welche Folgen Handlungslosigkeit haben wird.
+Die vollständigen Nachrichten sind im Anhang zu finden.
+
+Probanden jeder Gruppe bearbeitet direkt nach dem Lesen der Nachricht einen Bogen mit Thesen. Der Bogen lässt sich in zwei Blöcke unterteilen. Die Thesen sind jeweils auf einer Skala von 1 bis 5 zu bewerten, wobei 1 für den höhsten Grad an Ablehnung und 5 für den höchsten Grad an Zustimmung steht.
+Im ersten Block werden Thesen zur Risikowahrnehmung gestellt. Diese Thesen fordern den Probanden dazu auf, sowohl das Risiko von negative Folgen des Klimawandels auf sich selbst, als auch auf seine Umgebung und die Gesellschaft zu bewerten. Die Thesen sind wie folgt formuliert:
+
+\begin{enumerate}
+  \item Der Klimawandel stellt eine ernste Bedrohung für mein persönliches Leben dar.
+  \item Ich denke häufig über mögliche Klimarisiken nach.
+  \item Ich mache mir Sorgen, dass meine Familie oder Freunde in Zukunft durch den Klimawandel gefährdet werden.
+  \item Ich glaube, dass extreme Wetterereignisse in meiner Region zunehmen werden.
+  \item Mein eigenes Verhalten hat einen spürbaren Einfluss auf das Klima.
+  \item Wenn wir nicht handeln, wird die Zukunft sehr gefährlich.
+  \item Ich glaube, dass der Klimawandel globale Instabilität (z.B. Konflikte, Migration) verstärken wird.
+  \item Wie hoch schätzen Sie das Risiko des Klimawandels insgesamt für die Gesellschaft ein?
+\end{enumerate}
+
+Daraufhin folgen Thesen über die Handlungsbereitschaft des Probanden. Diese Thesen fordern den Probanden dazu auf, seine Bereitschaft zu bewerten, Maßnahmen gegen den Klimawandel zu ergreifen. Die Thesen des zweiten Blocks sind wie folgt formuliert:
+\begin{enumerate}
+  \item Ich bin bereit, meinen Fleischkonsum zu reduzieren.
+  \item Ich bin bereit, kurze Strecken ausschließlich mit dem Fahrrad oder zu Fuß zurückzulegen.
+  \item Ich bin bereit, auf Kurzstreckenflüge in meiner Freizeit zu verzichten.
+  \item Ich bin bereit, beim Einkaufen auf umweltfreundliche Produkte und Verpackungen zu achten ( z. B. Mehrwegbeutel, regionale oder ökologische Produkte).
+  \item Ich bin bereit, in meinem Haushalt konsequent Energie zu sparen und Müll zu trennen.
+  \item Ich bin bereit, auf Fast Fashion zu verzichten und bevorzugt langlebige oder Second-Hand Kleidung zu kaufen.
+  \item Ich bin bereit, mich aktiv für den Klimaschutz einzusetzen (z. B. Partei unterstützen, demonstrieren, darüber sprechen).
+\end{enumerate}
+
+Diese beiden Fragenblöcke bilden die Grundlage für die Analyse des Framingeffekts auf die empfundene Risikowahrnehmung und die Handlungsbereitschaft der Probanden. Um zusätzliche Variablen zu berücksichtigen, folgen auf die beiden Fragenblöcke demografische Fragen. Diese dienen dazu, die Stichprobe näher zu charakterisieren und mögliche Zusammenhänge zwischen demografischen Merkmalen und den Antworten auf die Fragen zu untersuchen.
+
+\section{Begründung für den Versuchsaufbau}
+Der oben beschriebene Versuchaufbau wurde gewählt, um den Framingeffekt in einem kontrollierten Umfeld zu untersuchen. Die Einteilung der Probanden in drei Gruppen ermöglicht es, die Auswirkungen unterschiedlicher Framing-Strategien auf die Risikowahrnehmung und Handlungsbereitschaft zu vergleichen. Dazu ist die Durchführung für die Probanden mit geringen Aufwand verbunden und Ortsunabhängig. Die Verbreitung des Thesenbogens ist einfach über das Internet möglich. Die Thesen sind geschlossen formuliert und ermöglichen eine einfache quantitative Auswertung.
+
 % -----------------------------------
-\backmatter 
 \bibliographystyle{apacite}				% bei natbib in deutsch
 \bibliography{./Literatur/quellen}		% Literaturquellen einbinden 
 
+\appendix
+
+\chapter{Framing Nachrichten}\label{app:messages}
+\section{Gewinn-Framing Nachricht Gruppe 1}\label{app:messages:gain}
+\begin{quote}
+  Der Klimawandel ist unsere Einladung, die Welt neu zu gestalten - grüner, gerechter und lebendiger als je zuvor. Durch konsequenten Klimaschutz können wir Millionen Menschenleben retten, Extremwetter reduzieren und unsere Lebensqualität deutlich verbessern. Gemeinsam schaffen wir eine Zukunft, in der saubere Luft, gesunde Lebensmittel und erneuerbare Energie für alle selbstverständlich sind. Es ist die größte Chance für eine bessere Welt - und wir sind mittendrin.
+\end{quote}
+\section{Verlust-Framing Nachricht Gruppe 2}\label{app:messages:loss}
+\begin{quote}
+  Der Klimawandel stellt eine ernsthafte Bedrohung für unsere Lebensgrundlagen dar. Ohne konsequenten Klimaschutz werden Millionen Menschen unter den Folgen leiden - durch zunehmende Extremwetterereignisse, schwindende Ressourcen und wachsende gesundheitliche Belastungen. Unsere Luft wird belasteter, gesunde Lebensmittel knapper und der Zugang zu Energie unsicherer und teurer. 
+Wenn wir weiterhin zögern, riskieren wir nicht nur Umweltverluste, sondern auch soziale und wirtschaftliche Instabilität. Die Chance auf eine lebenswerte, gerechte Zukunft schwindet mit jeder weiteren Verzögerung. Klimaschutz ist keine Option mehr - er ist eine dringende Notwendigkeit.
+\end{quote}
+\section{Dramatisierte Verlust-Framing Nachricht Gruppe 3}\label{app:messages:drama}
+\begin{quote}
+  Der Klimawandel ist kein Zukunftsproblem - er ist der Anfang vom Ende. Wenn wir nicht sofort radikal handeln, werden ganze Kontinente unbewohnbar, Meere zu kochenden Becken, in denen kein Leben mehr existiert. Städte werden im Wasser versinken oder unter der Gluthitze vergehen. Hungersnöte, Massenfluchten und globale Unruhen werden die Welt ins Chaos stürzen. Kinder, die heute geboren werden, könnten die Volljährigkeit in einer Welt erleben, die kaum noch Ressourcen, kaum noch Ordnung und kaum noch Menschlichkeit kennt.
+
+\end{quote}
 \end{document}
