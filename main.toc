@@ -5,8 +5,14 @@
 \contentsline {section}{\numberline {4.1}Versuchsziel und Hypothesen}{1}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Versuchsaufbau}{2}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Begründung für den Versuchsaufbau}{3}{section.4.3}%
-\contentsline {chapter}{\numberline {A}Framing Nachrichten}{3}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Gewinn-Framing Nachricht Gruppe 1}{4}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Verlust-Framing Nachricht Gruppe 2}{4}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Dramatisierte Verlust-Framing Nachricht Gruppe 3}{4}{section.A.3}%
+\contentsline {chapter}{\numberline {5}Evaluation}{4}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Informationen über den Versuchsablauf}{4}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Auswertung der Kontrollvariablen}{4}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Auswertung der Framing-Effekte}{5}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Diskussion}{5}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Fazit}{5}{chapter.7}%
+\contentsline {chapter}{\numberline {A}Framing Nachrichten}{5}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Gewinn-Framing Nachricht Gruppe 1}{6}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Verlust-Framing Nachricht Gruppe 2}{6}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Dramatisierte Verlust-Framing Nachricht Gruppe 3}{6}{section.A.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
