@@ -11,6 +11,7 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 %
 % Packages
 % -----------------------------------
+\usepackage{scrhack}                  % Fixes deprecated \float@addtolist warning in KOMA-Script
 \usepackage[
   paper=a4paper,
   left=12.5mm,
@@ -53,6 +54,7 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 \usepackage{lscape}					% zum Rotieren von Seiten
 
 \usepackage{amsmath}				% zum Schreiben von mathematischen Formeln
+\usepackage{float}                  % für [H] Platzierungsoption bei Figures
 
 \usepackage{calc}
 
@@ -138,7 +140,7 @@ Der oben beschriebene Versuchaufbau wurde gewählt, um den Framingeffekt in eine
 Die Umfrage wurde im Zeitraum vom 20.06.2025 bis zum 03.07.2025 durchgeführt. Ingesamt nahmen 110 Probanden an der Umfrage teil. Von diesen 110 Probanden konnten 105 berücksichtigt werden. Zwei wurden aufgrund des Mindestteilnahmealters von 18 Jahren ausgeschlossen und drei Probanden haben die Umfrage nicht vollständig ausgefüllt. Die resultierende Gruppenaufteilung ist wie folgt: 35 Probanden in Gruppe 1, 31 Probanden in Gruppe 2 und 39 Probanden in Gruppe 3. Den Probanden wurde über verschiedene Kanäle ein Link zur Onlineteilnahme an der Umfrage zur Verfügung gestellt. Die Teilnahme war freiwillig und anonym.
 
 \section{Auswertung der Kontrollvariablen}
-Von 105 Teilnehmenden sind 64 weiblich, 43 männlich und eine diverse Person.
+Von 105 Teilnehmenden sind 64 weiblich und 43 männlich.
 Teilnehmende sind im Alter von 18 bis 68 Jahren. Insgesamt 44 Probanden fallen in die Altersgruppe von 18 bis einschließlich 22 Jahre. Diese stellt damit die größte Gruppe dar. Das Alter 21 wurde am häufigsten angegeben. 
 Zur Größe der Heimatstadt gabt mit 70 Personen die Mehrheit der Probanden an in einer Stadt mit über 100.000 Einwohnern zu leben. 15 gaben 20.000 bis 100.000-, 13 gaben 5.000 bis 20.000- und 7 Probanden gaben unter 5.000 Einwohner an.
 Bezüglich der Bildungsjahre gab es keine klaren Angaben. Probanden wurden nach gesamten Bildungsjahren gefragt. Die Angaben enthalten jedoch Angaben von 0 bis einschließlich 25 Bildungsjahren. 18 Probanden gaben 15 Bildungsjahre an und 16 weitere Probanden gaben 3 oder 4 Bildungsjahre an. Vermutlich beziehen sich diese Angaben auf ein Studium oder einer Ausbildung wobei einige Probanden 12 oder 13 Jahre Schulbildung dazugerechnet haben und andere nicht. Es ist jedoch nicht eindeutig, wie viel tatsächliche Bildungsjahre die Probanden absolviert haben und somit wurde diese Kontrollvariable nicht in der Evaluation berücksichtigt.
@@ -177,4 +179,49 @@ Wenn wir weiterhin zögern, riskieren wir nicht nur Umweltverluste, sondern auch
   Der Klimawandel ist kein Zukunftsproblem - er ist der Anfang vom Ende. Wenn wir nicht sofort radikal handeln, werden ganze Kontinente unbewohnbar, Meere zu kochenden Becken, in denen kein Leben mehr existiert. Städte werden im Wasser versinken oder unter der Gluthitze vergehen. Hungersnöte, Massenfluchten und globale Unruhen werden die Welt ins Chaos stürzen. Kinder, die heute geboren werden, könnten die Volljährigkeit in einer Welt erleben, die kaum noch Ressourcen, kaum noch Ordnung und kaum noch Menschlichkeit kennt.
 
 \end{quote}
+
+\chapter{Graphen}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{./Bilder/gender_barplot.png}
+  \caption{Geschlecht der Probanden}
+  \label{fig:geschlecht}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./Bilder/age_histogram.png}
+    \caption{Altersverteilung der Probanden}
+    \label{fig:altersverteilung}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./Bilder/city_size_barplot.png}
+    \caption{Einwohneranzahl der Heimatstadt}
+    \label{fig:einwohneranzahl}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./Bilder/education_histogram.png}
+    \caption{Bildungsjahre der Probanden}
+    \label{fig:bildungsjahre}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./Bilder/info_klima_barplot.png}
+    \caption{Vorkenntnisse über den Klimawandel}
+    \label{fig:vorkenntnisse}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./Bilder/sorgen_klima_barplot.png}
+    \caption{Besorgnis über den Klimawandel}
+    \label{fig:besorgnis}
+\end{figure}
+
 \end{document}
