@@ -11,7 +11,7 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 %
 % Packages
 % -----------------------------------
-\usepackage{scrhack}                  % Fixes deprecated \float@addtolist warning in KOMA-Script
+% \usepackage{scrhack}                  % Removed: deprecated float@addtolist warning in KOMA-Script
 \usepackage[
   paper=a4paper,
   left=12.5mm,
@@ -28,43 +28,16 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 \setkomafont{disposition}{\bfseries}
 
 \usepackage{graphicx} 				% Grafiken einfügen (pdf,png - aber jpg vermeiden)
-\graphicspath{{./Bilder/}}          % Pfad zu den Bildern
-
-\usepackage{url}					% URL's formatieren (z.B. in Literatur) 
-\usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref} 				% für Hyperlinks in PDF-Dokumenten   
-  
-\usepackage{tabularx} 				% bessere Gestaltung von Tabellen
-\usepackage{longtable} 		
-\usepackage{multicol}				
-\usepackage{multirow}
-\usepackage{booktabs}
-\usepackage{tabularx}
+\graphicspath{{./Bilder/}}          % Pfad zu den Bildern			% für Hyperlinks in PDF-Dokumenten   
 		
-\usepackage[active]{srcltx}
-
-\usepackage{listings}				% Algorithmen
-
-\usepackage{mdwlist}				% Listen
+\usepackage[active]{srcltx} 
 \usepackage{enumitem}               % Customizable lists
 
 \usepackage{setspace} 				% Zeileneinstellung
-\newtheorem{mydef}{Merksatz}  		% Falls Beispiele, Merksätze m. fortl. Nr. gebr. werden
-\newtheorem{bsp}{Beispiel}
-
-\usepackage{lscape}					% zum Rotieren von Seiten
-
-\usepackage{amsmath}				% zum Schreiben von mathematischen Formeln
 \usepackage{float}                  % für [H] Platzierungsoption bei Figures
 
 \usepackage{calc}
-
-\usepackage{footnote}				% Fußnoten (entfernt wegen Konflikt mit microtype)
-\usepackage{tablefootnote}			% Fußnoten in Tabellen
 \usepackage{cleveref}
-%\clubpenalty = 10000
-%\widowpenalty = 10000 \displaywidowpenalty = 10000
-
-\hyphenation{voll-st\"andigen}		% Worttrennungen global definieren
 
 \setcounter{tocdepth}{1}			% Ebenen, die im Inhaltsverzeichnis angezeigt werden
 
@@ -75,13 +48,44 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 \frontmatter 
     \include{./Titel/titel} 			% Titelblatt
     \clearpage{\pagestyle{empty}\cleardoublepage}
-    \onehalfspacing                  	% Zeilenabstand ab hier 1.5 zeilig
-    \tableofcontents 					% Inhaltsverzeichnis
+    \onehalfspacing{}
+    \tableofcontents{}
     \clearpage{\pagestyle{empty}\cleardoublepage} 
 % -----------------------------------
-\mainmatter 							% die einzelnen Kapitel
+
+\mainmatter{}
 \chapter{Einleitung}
 \chapter{Hintergrund}
+
+\section{Hintergrund von Framing}
+Frames werden als  von Akteuren verstanden, die gewisse Informationen und Positionen hervorheben und andere ausblenden. Frames finden sich bei strategischen Kommunikatoren, in den Medieninhalten sowie bei den Rezipienten. Damit lassen sich Frames sowohl im kognitiven Apparat des Menschen ausmachen als auch in kommunizierten Inhalten. Der Framing-Ansatz beschäftigt sich dementsprechend mit der Genese, Veränderung und den Effekten von Frames auf der Ebene der Kommunikatoren, des Medieninhaltes und der Rezipienten~\cite{entman_framing_1993}.
+
+Der Begriff Framing bezeichnet in den Sozial- und Kommunikationswissenschaften die Art und Weise, wie Informationen präsentiert und damit interpretiert werden können.~\cite{entman_framing_1993} definiert Frames als „Auswahl bestimmter Aspekte einer wahrgenommenen Realität“, die in einer Botschaft hervorgehoben werden, um eine spezifische Problemdefinition, Kausalattribution, moralische Bewertung oder Handlungsempfehlung zu fördern . Frames wirken dabei als kognitive Deutungsrahmen~\cite{goffman_frame_analysis_1974}, die Wahrnehmung strukturieren und es Individuen ermöglichen, komplexe Sachverhalte in kohärente Interpretationen zu übersetzen.
+
+In der Psychologie wurde das Phänomen vor allem durch die Arbeiten von Kahneman und Tversky~\cite{kahneman_prospect_1979} theoretisch und empirisch fundiert. Mit der Prospect Theory (1979)~\cite{kahneman_prospect_1979} zeigten sie, dass Menschen Entscheidungen nicht allein auf Basis objektiver Wahrscheinlichkeiten und Nutzenkalküle treffen, sondern stark von der Darstellungsweise (`frame') derselben Information beeinflusst werden. Ein klassisches Beispiel ist das sogenannte `Asian Disease Problem'~\cite{tversky1981framing}: Probanden bewerteten identische Handlungsalternativen unterschiedlich, je nachdem, ob die Konsequenzen als Gewinne (z. B. `200 Leben werden gerettet') oder als Verluste (`400 Menschen werden sterben') formuliert wurden . Obwohl beide Varianten inhaltlich äquivalent sind, führten sie zu systematisch verschiedenen Präferenzen.
+
+Hieraus entwickelte sich die Unterscheidung zwischen Gewinn-Framing (gain framing) und Verlust-Framing (loss framing). Beim Gewinn-Framing werden Handlungsoptionen so dargestellt, dass potenzielle Vorteile und positive Konsequenzen betont werden; beim Verlust-Framing hingegen werden mögliche Nachteile oder Risiken hervorgehoben. Zahlreiche Studien zeigen, dass diese Rahmungseffekte messbaren Einfluss auf Einstellungen und Entscheidungen haben können~\cite{levin_schneider_gaeth_1998,kuhberger_framing_meta_1998}. Dabei gilt nicht ein universelles Muster, sondern die Wirkung hängt vom Kontext, vom Thema sowie von den Prädispositionen des Publikums ab.
+
+Die theoretische Grundlage liefert die Prospect Theory, nach der Menschen systematisch verlustavers sind: Verluste werden im Allgemeinen stärker gewichtet als gleich große Gewinne~\cite{kahneman_prospect_1979}. Dies bedeutet, dass Verlust-Frames in bestimmten Entscheidungskontexten eine größere Verhaltensänderung hervorrufen können, da potenzielle Risiken emotional stärker salient sind. Allerdings verweisen Meta-Analysen darauf, dass der Effekt nicht in allen Bereichen konsistent ist~\cite{okeeffe_jensen_2007}. So kann etwa Gewinn-Framing bei präventivem Verhalten (z. B. Gesundheitsvorsorge) wirksamer sein, während Verlust-Framing bei detektivischen oder risikobehafteten Verhaltensweisen stärker motiviert~\cite{rothman_etal_1993}.
+
+Übertragen auf Kommunikationsprozesse verdeutlicht dies, dass Frames nicht nur den Inhalt von Botschaften strukturieren, sondern auch deren Valenz – also ob die möglichen Folgen einer Handlung in einem positiven oder negativen Licht erscheinen. Gewinn- und Verlust-Framing bilden daher zentrale analytische Kategorien in der Forschung zu Entscheidungsverhalten und Meinungsbildung.
+
+Gerade in der Klimakommunikation gewinnt diese Unterscheidung an Bedeutung: Maßnahmen zum Klimaschutz können sowohl als Chance (z. B. „Förderung von Innovation und sauberer Energie“) als auch als Vermeidungsstrategie (z. B. „Verhinderung von Schäden und Katastrophen“) dargestellt werden. Welche Rahmung jeweils effektiver ist, bleibt empirisch offen und abhängig vom Publikum sowie vom Kontext. Deshalb ist eine differenzierte Betrachtung von Gewinn- und Verlust-Frames für die Analyse öffentlicher Debatten über den Klimawandel besonders relevant und bildet eine theoretische Grundlage für das weitere Kapitel.
+
+\section{Warum Framing-Effekte in Bezug auf den Klimawandel betrachtet werden}
+Ideen:
+Klimawandel ist ein zentrales Problem der Menschheit.
+Es gibt viele Möglichkeiten, den Klimawandel zu bekämpfen.
+Information und Studien über den Klimawandel sind vorhanden und auch zugänglich.
+Aber:
+Fakten nicht das wichtigste, sondern wie die menschen eingestellt sind
+Denn:
+Menschen handeln nicht rational, sondern emotional. Studien zeigen, dass Menschen nicht zwingend auf und sogar aktiv gegen Fakten handeln.
+Deshalb:
+Framing ist relevant für den Klimaschutz, da es zentral ist, WIE Menschen über den Klimawandel informiert werden.
+Damit kann möglicherweise die Handlungsbereitschaft, Risikowahrnehmung, Bewusstsein, Akzeptanz erhöht werden.
+
+
 \chapter{Verhaltensökonomische Grundlagen}
 \section{Framing}
 \chapter{Ähnliche Studien}
@@ -255,10 +259,10 @@ Wenn wir weiterhin zögern, riskieren wir nicht nur Umweltverluste, sondern auch
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{./Bilder/sorgen_klima_barplot.png}
-    \caption{Besorgnis über den Klimawandel}
-    \label{fig:besorgnis}
+  \centering
+  \includegraphics[width=0.6\textwidth]{./Bilder/sorgen_klima_barplot.png}
+  \caption{Besorgnis über den Klimawandel}
+\label{fig:besorgnis}
 \end{figure}
 
 \end{document}
