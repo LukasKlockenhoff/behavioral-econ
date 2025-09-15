@@ -1,5 +1,14 @@
-\documentclass[12pt,twoside=off,
-bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=on' für Druckversion oder 'twoside=off' für Onlineversion
+\documentclass[
+	12pt, %Schriftgröße
+	a4paper,
+	listof=totoc, %Inhaltsverzeichniseinträge für Listen (z.B. Abbildungen)
+  bibliography=totoc, %Inhaltsverzeichniseinträge für Literaturverzeichnis
+	numbers=noenddot, %Entfernt Punkt hinter Gliederungsnummern
+	german, %Sprachpaket
+	headsepline, %Headertrennlinie
+	%footsepline, %Footertrennlinie
+	oneside %einseitiges Druckformat %%% Unterdrücken der leeren Seite nach Titelblatt
+	]{scrbook} %Dokumentenklasse (Koma-Script) % 'twoside=on' für Druckversion oder 'twoside=off' für Onlineversion
 
 \makeatletter
 \renewcommand\chapter{\thispagestyle{plain}%
@@ -19,8 +28,6 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
   top=25mm,
   bottom=50mm,
   bindingoffset=10mm]{geometry}		% Seitenränder und Bindungskorrektur einstellen
-  
-\usepackage{apacite} 				% Literatur-Referenzen: American Psycholog. Assoc.
 \usepackage[utf8]{inputenc}         % Umlaute im Text
 \usepackage{ngerman}				% Rechtschreibg.
 \usepackage[T1]{fontenc}
@@ -37,7 +44,14 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 \usepackage{float}                  % für [H] Platzierungsoption bei Figures
 
 \usepackage{calc}
+\usepackage{hyperref}
 \usepackage{cleveref}
+\usepackage[
+backend=biber,
+style=apa,
+sorting=none
+]{biblatex}
+\addbibresource{./Literatur/quellen.bib}
 
 \setcounter{tocdepth}{1}			% Ebenen, die im Inhaltsverzeichnis angezeigt werden
 
@@ -56,13 +70,13 @@ bibtotoc,liststotoc,appendixprefix,paper=a4,headings=small]{scrbook} % 'twoside=
 \mainmatter{}
 \chapter{Einleitung}
 
-Der Klimawandel ist ein komplexes Phänomen, welches seit vielen Jahren in der Forschung untersucht und politisch diskutiert wird. Während der politische Diskurs den Klimawandel häufig als kontroverses Thema darstellt und die Rolle des Menschen infrage stellt, sind sich Forscher einig, dass die klimawandelbedingten Folgen auf die Erde für Menschen eine große Bedrohung darstellen. Um diese negativen Folgen zu vermeiden, sind sich Forscher sicher, dass Intervention in großem Maße notwendig ist \cite{Rossa-Roccor2021}.
+Der Klimawandel ist ein komplexes Phänomen, welches seit vielen Jahren in der Forschung untersucht und politisch diskutiert wird. Während der politische Diskurs den Klimawandel häufig als kontroverses Thema darstellt und die Rolle des Menschen infrage stellt, sind sich Forscher einig, dass die klimawandelbedingten Folgen auf die Erde für Menschen eine große Bedrohung darstellen. Um diese negativen Folgen zu vermeiden, sind sich Forscher sicher, dass Intervention in großem Maße notwendig ist~\parencite{Rossa-Roccor2021}.
 
-Trotz deutlicher wissenschaftlicher Belege für einen menschengemachten Klimawandel \cite{cause}, ist die Wahrnehmung des Klimawandels durch BürgerInnen stark politisch geprägt. So bestimmt politische Zugehörigkeit die Neigung in der Klimadebatte \cite{Bertolotti}. Obwohl Studien zeigen, dass die Bevölkerung zunehmend besser über den Klimawandel informiert ist und diesen als Bedrohung wahrnimmt \cite{2022ComEE...3..239D}, ist die Handlungsbereitschaft gering ausgeprägt \cite{unep2021making}. Die global mehrheitliche Nichteinhaltung von gesetzten Klimazielen deutet darauf hin, dass Maßnahmen zum Eindämmen der negativen Klimawandelfolgen nicht oder nicht ausreichend umgesetzt werden\cite{unep2021making}.
+Trotz deutlicher wissenschaftlicher Belege für einen menschengemachten Klimawandel~\parencite{cause}, ist die Wahrnehmung des Klimawandels durch BürgerInnen stark politisch geprägt. So bestimmt politische Zugehörigkeit die Neigung in der Klimadebatte~\parencite{Bertolotti}. Obwohl Studien zeigen, dass die Bevölkerung zunehmend besser über den Klimawandel informiert ist und diesen als Bedrohung wahrnimmt~\parencite{2022ComEE...3..239D}, ist die Handlungsbereitschaft gering ausgeprägt~\parencite{unep2021making}. Die global mehrheitliche Nichteinhaltung von gesetzten Klimazielen deutet darauf hin, dass Maßnahmen zum Eindämmen der negativen Klimawandelfolgen nicht oder nicht ausreichend umgesetzt werden\cite{unep2021making}.
 
 Diese Studie meint bei Maßnahmen solche, mit denen Bürger und Bürgerinnen im Alltag dem Klimawandel entgegenwirken können. Es sind keine staatlichen Akteure gemeint.
 
-Dadurch, dass der Klimawandel als Thema so hoch politisiert ist, sind Nachrichten und Informationen zum Klimawandel häufig nicht sachlich formuliert. In politischen Texten werden bestimmte Formulierungen gewählt, um emotionale Reaktionen der LeserInnen in Bezug auf den Klimawandel hervorzurufen \cite{Rossa-Roccor2021}.  
+Dadurch, dass der Klimawandel als Thema so hoch politisiert ist, sind Nachrichten und Informationen zum Klimawandel häufig nicht sachlich formuliert. In politischen Texten werden bestimmte Formulierungen gewählt, um emotionale Reaktionen der LeserInnen in Bezug auf den Klimawandel hervorzurufen~\parencite{Rossa-Roccor2021}.
 
 Diese Studie untersucht, wie dieses sogenannte Framing die Handlungsbereitschaft und Risikowahrnehmung in Bezug auf den Klimawandel beeinflusst. Dazu werden drei Arten von Framing in Form von unterschiedlich formulierten Nachrichten und deren Effekte untersucht.
 
@@ -77,25 +91,25 @@ Um Framing-Effekte in Bezug auf den Klimawandel zu untersuchen, ist es notwendig
 
 \section{Hintergrund von Framing}
 
-Frames werden als von Akteuren verstanden, die gewisse Informationen und Positionen hervorheben und andere ausblenden. Frames finden sich bei strategischen Kommunikatoren, in den Medieninhalten sowie bei den Rezipienten. Damit lassen sich Frames sowohl im kognitiven Apparat des Menschen ausmachen als auch in kommunizierten Inhalten. Der Framing-Ansatz beschäftigt sich dementsprechend mit der Genese, Veränderung und den Effekten von Frames auf der Ebene der Kommunikatoren, des Medieninhaltes und der Rezipienten~\cite{entman_framing_1993}.
+Frames werden als von Akteuren verstanden, die gewisse Informationen und Positionen hervorheben und andere ausblenden. Frames finden sich bei strategischen Kommunikatoren, in den Medieninhalten sowie bei den Rezipienten. Damit lassen sich Frames sowohl im kognitiven Apparat des Menschen ausmachen als auch in kommunizierten Inhalten. Der Framing-Ansatz beschäftigt sich dementsprechend mit der Genese, Veränderung und den Effekten von Frames auf der Ebene der Kommunikatoren, des Medieninhaltes und der Rezipienten~\parencite{entman_framing_1993}.
 
-Der Begriff Framing bezeichnet in den Sozial- und Kommunikationswissenschaften die Art und Weise, wie Informationen präsentiert und damit interpretiert werden können. ~\cite{entman_framing_1993} definiert Frames als „Auswahl bestimmter Aspekte einer wahrgenommenen Realität“, die in einer Botschaft hervorgehoben werden, um eine spezifische Problemdefinition, Kausalattribution, moralische Bewertung oder Handlungsempfehlung zu fördern. Frames wirken dabei als kognitive Deutungsrahmen~\cite{goffman_frame_analysis_1974}, die Wahrnehmung strukturieren und es Individuen ermöglichen, komplexe Sachverhalte in kohärente Interpretationen zu übersetzen.
+Der Begriff Framing bezeichnet in den Sozial- und Kommunikationswissenschaften die Art und Weise, wie Informationen präsentiert und damit interpretiert werden können. ~\parencite{entman_framing_1993} definiert Frames als „Auswahl bestimmter Aspekte einer wahrgenommenen Realität“, die in einer Botschaft hervorgehoben werden, um eine spezifische Problemdefinition, Kausalattribution, moralische Bewertung oder Handlungsempfehlung zu fördern. Frames wirken dabei als kognitive Deutungsrahmen~\parencite{goffman_frame_analysis_1974}, die Wahrnehmung strukturieren und es Individuen ermöglichen, komplexe Sachverhalte in kohärente Interpretationen zu übersetzen.
 
-In der Psychologie wurde das Phänomen vor allem durch die Arbeiten von Kahneman und Tversky~\cite{kahneman_prospect_1979} theoretisch und empirisch fundiert. Mit der Prospect Theory (1979)~\cite{kahneman_prospect_1979} zeigten sie, dass Menschen Entscheidungen nicht allein auf Basis objektiver Wahrscheinlichkeiten und Nutzenkalküle treffen, sondern stark von der Darstellungsweise (`frame') derselben Information beeinflusst werden. Ein klassisches Beispiel ist das sogenannte `Asian Disease Problem'~\cite{tversky1981framing}: Probanden bewerteten identische Handlungsalternativen unterschiedlich, je nachdem, ob die Konsequenzen als Gewinne (z. B. `200 Leben werden gerettet') oder als Verluste (`400 Menschen werden sterben') formuliert wurden . Obwohl beide Varianten inhaltlich äquivalent sind, führten sie zu systematisch verschiedenen Präferenzen.
+In der Psychologie wurde das Phänomen vor allem durch die Arbeiten von Kahneman und Tversky~\parencite{kahneman_prospect_1979} theoretisch und empirisch fundiert. Mit der Prospect Theory (1979)~\parencite{kahneman_prospect_1979} zeigten sie, dass Menschen Entscheidungen nicht allein auf Basis objektiver Wahrscheinlichkeiten und Nutzenkalküle treffen, sondern stark von der Darstellungsweise (`frame') derselben Information beeinflusst werden. Ein klassisches Beispiel ist das sogenannte `Asian Disease Problem'~\parencite{tversky1981framing}: Probanden bewerteten identische Handlungsalternativen unterschiedlich, je nachdem, ob die Konsequenzen als Gewinne (z. B. `200 Leben werden gerettet') oder als Verluste (`400 Menschen werden sterben') formuliert wurden . Obwohl beide Varianten inhaltlich äquivalent sind, führten sie zu systematisch verschiedenen Präferenzen.
 
-Hieraus entwickelte sich die Unterscheidung zwischen Gewinn-Framing (gain framing) und Verlust-Framing (loss framing). Beim Gewinn-Framing werden Handlungsoptionen so dargestellt, dass potenzielle Vorteile und positive Konsequenzen betont werden; beim Verlust-Framing hingegen werden mögliche Nachteile oder Risiken hervorgehoben. Zahlreiche Studien zeigen, dass diese Rahmungseffekte messbaren Einfluss auf Einstellungen und Entscheidungen haben können~\cite{levin_schneider_gaeth_1998,kuhberger_framing_meta_1998}. Dabei gilt nicht ein universelles Muster, sondern die Wirkung hängt vom Kontext, vom Thema sowie von den Prädispositionen des Publikums ab.
+Hieraus entwickelte sich die Unterscheidung zwischen Gewinn-Framing (gain framing) und Verlust-Framing (loss framing). Beim Gewinn-Framing werden Handlungsoptionen so dargestellt, dass potenzielle Vorteile und positive Konsequenzen betont werden; beim Verlust-Framing hingegen werden mögliche Nachteile oder Risiken hervorgehoben. Zahlreiche Studien zeigen, dass diese Rahmungseffekte messbaren Einfluss auf Einstellungen und Entscheidungen haben können~\parencite{levin_schneider_gaeth_1998,kuhberger_framing_meta_1998}. Dabei gilt nicht ein universelles Muster, sondern die Wirkung hängt vom Kontext, vom Thema sowie von den Prädispositionen des Publikums ab.
 
-Die theoretische Grundlage liefert die Prospect Theory, nach der Menschen systematisch verlustavers sind: Verluste werden im Allgemeinen stärker gewichtet als gleich große Gewinne~\cite{kahneman_prospect_1979}. Dies bedeutet, dass Verlust-Frames in bestimmten Entscheidungskontexten eine größere Verhaltensänderung hervorrufen können, da potenzielle Risiken emotional stärker salient sind. Allerdings verweisen Meta-Analysen darauf, dass der Effekt nicht in allen Bereichen konsistent ist~\cite{okeeffe_jensen_2007}. So kann etwa Gewinn-Framing bei präventivem Verhalten (z. B. Gesundheitsvorsorge) wirksamer sein, während Verlust-Framing bei detektivischen oder risikobehafteten Verhaltensweisen stärker motiviert~\cite{rothman_etal_1993}.
+Die theoretische Grundlage liefert die Prospect Theory, nach der Menschen systematisch verlustavers sind: Verluste werden im Allgemeinen stärker gewichtet als gleich große Gewinne~\parencite{kahneman_prospect_1979}. Dies bedeutet, dass Verlust-Frames in bestimmten Entscheidungskontexten eine größere Verhaltensänderung hervorrufen können, da potenzielle Risiken emotional stärker salient sind. Allerdings verweisen Meta-Analysen darauf, dass der Effekt nicht in allen Bereichen konsistent ist~\parencite{okeeffe_jensen_2007}. So kann etwa Gewinn-Framing bei präventivem Verhalten (z. B. Gesundheitsvorsorge) wirksamer sein, während Verlust-Framing bei detektivischen oder risikobehafteten Verhaltensweisen stärker motiviert~\parencite{rothman_etal_1993}.
 
 Übertragen auf Kommunikationsprozesse verdeutlicht dies, dass Frames nicht nur den Inhalt von Botschaften strukturieren, sondern auch deren Valenz – also ob die möglichen Folgen einer Handlung in einem positiven oder negativen Licht erscheinen. Gewinn- und Verlust-Framing bilden daher zentrale analytische Kategorien in der Forschung zu Entscheidungsverhalten und Meinungsbildung.
 
-Gerade in der Klimakommunikation gewinnt diese Unterscheidung an Bedeutung. Maßnahmen zum Klimaschutz können sowohl als Chance (z. B. „Förderung von Innovation und sauberer Energie“) als auch als Vermeidungsstrategie (z. B. „Verhinderung von Schäden und Katastrophen“) dargestellt werden. Gleichzeitig weisen Studien darauf hin, dass eine übermäßige Dramatisierung oder negative Emotionalisierung kontraproduktiv sein kann. Übertreibungen können dazu führen, dass Rezipienten die Glaubwürdigkeit der Botschaft infrage stellen oder sie sogar ablehnen, um kognitive Dissonanz zu vermeiden~\cite{bloodhart2019worried}. Welches Framing jeweils effektiver ist, bleibt daher empirisch offen und abhängig vom Publikum sowie vom Kontext. Eine differenzierte Betrachtung von Gewinn-, Verlust- und dramatisierten Frames ist somit für die Analyse öffentlicher Debatten über den Klimawandel besonders relevant und bildet eine theoretische Grundlage für das weitere Kapitel.
+Gerade in der Klimakommunikation gewinnt diese Unterscheidung an Bedeutung. Maßnahmen zum Klimaschutz können sowohl als Chance (z. B. „Förderung von Innovation und sauberer Energie“) als auch als Vermeidungsstrategie (z. B. „Verhinderung von Schäden und Katastrophen“) dargestellt werden. Gleichzeitig weisen Studien darauf hin, dass eine übermäßige Dramatisierung oder negative Emotionalisierung kontraproduktiv sein kann. Übertreibungen können dazu führen, dass Rezipienten die Glaubwürdigkeit der Botschaft infrage stellen oder sie sogar ablehnen, um kognitive Dissonanz zu vermeiden~\parencite{bloodhart2019worried}. Welches Framing jeweils effektiver ist, bleibt daher empirisch offen und abhängig vom Publikum sowie vom Kontext. Eine differenzierte Betrachtung von Gewinn-, Verlust- und dramatisierten Frames ist somit für die Analyse öffentlicher Debatten über den Klimawandel besonders relevant und bildet eine theoretische Grundlage für das weitere Kapitel.
 
 \section{Warum Framing-Effekte in Bezug auf den Klimawandel betrachtet werden}
 
-Der Klimawandel stellt eine der zentralen Herausforderungen der Menschheit dar. Obwohl zahlreiche wissenschaftliche Studien seine Ursachen und Folgen belegen und entsprechende Informationen der Öffentlichkeit grundsätzlich zugänglich sind, bleibt die tatsächliche Handlungsbereitschaft vieler Menschen vergleichsweise gering. Dies deutet darauf hin, dass nicht allein die Verfügbarkeit von Fakten entscheidend ist, sondern vor allem die Art und Weise, wie Menschen diese Informationen wahrnehmen und einordnen~\cite{Bertolotti}.
+Der Klimawandel stellt eine der zentralen Herausforderungen der Menschheit dar. Obwohl zahlreiche wissenschaftliche Studien seine Ursachen und Folgen belegen und entsprechende Informationen der Öffentlichkeit grundsätzlich zugänglich sind, bleibt die tatsächliche Handlungsbereitschaft vieler Menschen vergleichsweise gering. Dies deutet darauf hin, dass nicht allein die Verfügbarkeit von Fakten entscheidend ist, sondern vor allem die Art und Weise, wie Menschen diese Informationen wahrnehmen und einordnen~\parencite{Bertolotti}.
 
-Forschungsergebnisse zeigen, dass Individuen Entscheidungen häufig nicht rein rational, sondern stark emotional geprägt treffen~\cite{Myers2012}. Mitunter handeln sie sogar entgegen klarer wissenschaftlicher Befunde~\cite{Bertolotti}. In diesem Zusammenhang wird deutlich, dass Kommunikationsstrategien eine Schlüsselrolle spielen: Nicht die objektive Information allein ist ausschlaggebend, sondern die Einstellung, die durch die Formulierung und Rahmung dieser Information vermittelt wird~\cite{Myers2012}.
+Forschungsergebnisse zeigen, dass Individuen Entscheidungen häufig nicht rein rational, sondern stark emotional geprägt treffen~\parencite{Myers2012}. Mitunter handeln sie sogar entgegen klarer wissenschaftlicher Befunde~\parencite{Bertolotti}. In diesem Zusammenhang wird deutlich, dass Kommunikationsstrategien eine Schlüsselrolle spielen: Nicht die objektive Information allein ist ausschlaggebend, sondern die Einstellung, die durch die Formulierung und Rahmung dieser Information vermittelt wird~\parencite{Myers2012}.
 
 Framing ist daher im Kontext des Klimawandels von besonderer Relevanz. Je nachdem, wie Nachrichten über Ursachen, Risiken und Handlungsoptionen präsentiert werden, können sie das Bewusstsein, die Risikowahrnehmung und letztlich auch die Bereitschaft zum Handeln erheblich beeinflussen. Eine gezielte Rahmung kann dazu beitragen, Akzeptanz für Klimaschutzmaßnahmen zu fördern und individuelle Verhaltensänderungen zu unterstützen.
 
@@ -118,7 +132,7 @@ Die erste Gruppe erhält eine Verlust-Framing Nachricht, die zweite Gruppe eine 
 Im Kontrast dazu sind die Nachrichten der ersten beiden Gruppen sachlicher und weniger emotional.
 Die Nachricht der ersten Gruppe formuliert Klimawandel als Möglichkeit in Gemeinschaft die Welt neu zu gestalten.
 Gruppe zwei erhält eine Nachricht, die Maßnahmen fordert und dem Lesenden sachlich aber deutlich darstellt welche Folgen Handlungslosigkeit haben wird.
-Die vollständigen Nachrichten sind im Anhang zu finden.
+Die vollständigen Nachrichten sind in~\Cref{app:messages} zu finden.
 
 Probanden jeder Gruppe bearbeitet direkt nach dem Lesen der Nachricht einen Bogen mit Thesen. Der Bogen lässt sich in zwei Blöcke unterteilen. Die Thesen sind jeweils auf einer Skala von 1 bis 5 zu bewerten, wobei 1 für den höhsten Grad an Ablehnung und 5 für den höchsten Grad an Zustimmung steht.
 
@@ -170,59 +184,61 @@ Die Besorgnis korreliert mit 0,49 mit den angegebenen Vorkenntnissen. Dies deute
 Das folgende Kapitel wertet den Effekt des Framings auf die Risikobereitschaft und Handlungsbereitschaft in den drei Probandengruppe aus.
 
 \subsection{Effekt von Framing auf die Risikowahrnehmung}\label{sec:framing_risk}
-Die Risikowahrnehmung wurde mithilfe der Thesen erfasst, die in \cref{chap:methodik} beschrieben wurden. Die Probanden der Gruppe 2, die die Verlust-Framing Nachricht zu Beginn der Umfrage gelesen haben, schätzten das mit dem Klimawandel verbundene Risiko am höchsten ein. Der Mittelwert der Risikowahrnehmung in dieser Gruppe liegt bei 3.84. Mit einer Differenz von 0,03 folgt die durchschnittliche Risikowahrnehmung von 3.81 der Probanden, die die Gewinn-Framing Nachricht bekommen haben. Die geringste Risikowahrnehmung haben die Probanden der Gruppe 3 mit durchnittlich 3.73 von 5. Dazu zeigt Gruppe 3 die größte Streuung in der Risikowahrnehmung mit einer Standardabweichung von 0,80. Die Probanden gaben Risikowahrnehmungswerte zwischen 2 und 5 an. Die Werte der Gruppe 1 variieren von zwischen 2,38 und 4,88 mit einer Standardabweichung von 0,65 und die der Gruppe 2 zwischen 2,38 und 4,75 mit einer Standardabweichung von 0,53.
+Die Risikowahrnehmung wurde mithilfe der Thesen erfasst, die in \Cref{chap:methodik} beschrieben wurden. Die Probanden der Gruppe 2, die die Verlust-Framing-Nachricht zu Beginn der Umfrage gelesen hatten, schätzten das mit dem Klimawandel verbundene Risiko am höchsten ein. Der Mittelwert der Risikowahrnehmung in dieser Gruppe liegt bei 3,84. Mit einer Differenz von 0,03 folgt die durchschnittliche Risikowahrnehmung von 3,81 der Probanden, die die Gewinn-Framing-Nachricht bekommen haben. Die geringste Risikowahrnehmung haben die Probanden der Gruppe 3 mit durchschnittlich 3,73 von 5. Dazu zeigt Gruppe 3 die größte Streuung in der Risikowahrnehmung mit einer Standardabweichung von 0,80. Die Probanden gaben Risikowahrnehmungswerte zwischen 2 und 5 an. Die Werte der Gruppe 1 variieren zwischen 2,38 und 4,88 mit einer Standardabweichung von 0,65 und die der Gruppe 2 zwischen 2,38 und 4,75 mit einer Standardabweichung von 0,53.
 
-Die Hypothese 1 wird somit gestützt, da das Verlust-Framing zu einer höheren Risikowahrnehmung führt. Allerdings ist die Differenz zwischen den Gruppen 1 und 2 nur gering. Die Probanden der Gruppe 3, die eine dramatisierte Verlust-Framing Nachricht erhalten haben, zeigen eine geringere Risikowahrnehmung als die Probanden der Gruppe 2, was die Hypothese 2 stützt. Die dramatisierte Verlust-Framing Nachricht scheint zu einer großen Streuung in der Risikowahrnehmung zu führen. Dies deutet darauf hin, dass die dramatisierte Verlust-Framing Nachricht die Probanden ungleichmäßig beeinflusst hat. 
+Hypothese 1 wird somit gestützt, da das Verlust-Framing zu einer höheren Risikowahrnehmung führt. Allerdings ist die Differenz zwischen den Gruppen 1 und 2 nur gering. Die Probanden der Gruppe 3, die eine dramatisierte Verlust-Framing-Nachricht erhalten haben, zeigen eine geringere Risikowahrnehmung als die Probanden der Gruppe 2, was die Hypothese 2 stützt. Die dramatisierte Verlust-Framing-Nachricht scheint zu einer großen Streuung in der Risikowahrnehmung zu führen. Dies deutet darauf hin, dass die dramatisierte Verlust-Framing Nachricht die Probanden ungleichmäßig beeinflusst hat.
 
 \subsection{Effekt von Framing auf die Handlungsbereitschaft}\label{sec:framing_action}
-Die Handlungsbereitschaft wurde mithilfe der Thesen erfasst, die in \cref{chap:methodik} beschrieben wurden. Die Probanden der Gruppe 1, die eine Gewinn-Framing Nachricht erhalten haben, zeigen die höchste durchschnittliche Handlungsbereitschaft mit einem Mittelwert von 3,84. Die Probanden der Gruppe 2 unterscheiden sich mit einem Mittelwert von 3.76 nur geringfügig von Gruppe 1. Auch der Mittelwert der Gruppe 3, die eine dramatisierte Verlust-Framing Nachricht erhalten hat, liegt mit 3.74 nahe an den anderen Gruppen.
+Die Handlungsbereitschaft wurde mithilfe der Thesen erfasst, die in \Cref{chap:methodik} beschrieben wurden. Die Probanden der Gruppe 1, die eine Gewinn-Framing-Nachricht erhalten haben, zeigen die höchste durchschnittliche Handlungsbereitschaft mit einem Mittelwert von 3,84. Probanden der Gruppe 2 unterscheiden sich mit einem Mittelwert von 3,76 nur geringfügig von Gruppe 1. Auch der Mittelwert der Gruppe 3, die eine dramatisierte Verlust-Framing-Nachricht erhalten hat, liegt mit 3,74 nahe den anderen Gruppen.
 
-In Bezug auf die Hypothese 1 zeigt sich, dass anders als angenommen, die Probanden mit Gewinn-Framing die höchste Bereitschaft haben, zu gunsten des Klimas zu handeln. Insbesondere bei These 1, die die Bereitschaft zur Reduktion des Fleischkonsums abfragt und These 2, die die Bereitschaft abfragt, kurze Strecken ausschließlich mit dem Fahrrad oder zu Fuß zurückzulegen, zeigen die Probanden der Gruppe 1 eine deutlich höhere mittlere Zustimmung als die Probanden der anderen Gruppen.
+In Bezug auf Hypothese 1 zeigt sich, dass, anders als angenommen, die Probanden mit Gewinn-Framing die höchste Bereitschaft haben, zugunsten des Klimas zu handeln. Insbesondere bei These 1, die die Bereitschaft zur Reduktion des Fleischkonsums abfragt, und These 2, die die Bereitschaft abfragt, kurze Strecken ausschließlich mit dem Fahrrad oder zu Fuß zurückzulegen, zeigen die Probanden der Gruppe 1 eine deutlich höhere mittlere Zustimmung als die Probanden der anderen Gruppen.
 
-Die Bereitschaft im Haushalt Energie zu sparen und Müll zu trennen, zeigt sich in allen drei Gruppen hoch. Allerdings ist die Zustimmung hier in den Gruppen mit Verlust-Framing höher als in der Gruppe mit Gewinn-Framing. Dies könnte darauf hindeuten, dass Verlust-Framing die Probanden dazu motiviert, im Alltag umweltfreundlicher zu handeln, während Gewinn-Framing eher zu einer höheren Bereitschaft führt, größere Veränderungen vorzunehmen.
+Die Bereitschaft, im Haushalt Energie zu sparen und Müll zu trennen, zeigt sich in allen drei Gruppen hoch. Allerdings ist die Zustimmung hier in den Gruppen mit Verlust-Framing höher als in der Gruppe mit Gewinn-Framing. Dies könnte darauf hindeuten, dass Verlust-Framing die Probanden dazu motiviert, im Alltag umweltfreundlicher zu handeln, während Gewinn-Framing eher zu einer höheren Bereitschaft führt, größere Veränderungen vorzunehmen.
 
 Ein Einsatz für Klimaschutz in Form von politischer Unterstützung, Demonstrationen oder Gesprächen über den Klimawandel zeigt sich in allen Gruppen relativ gering. Mit 3,26 in sowohl Gruppe 1 als auch Gruppe 2 zeigt Framing hier keinen Effekt.
 
-Die zweite Hypothese konnte ebenfalls nicht bestätigt werden. Die dramatisierte Verlust-Framing Nachricht führt nicht zu Verlust an Glaubwürdigkeit und damit Handlungsbereitschaft. Die Probanden der Gruppe 3 zeigen sich im Durchschnitt ähnlich handlungsbereit wie die Probanden der Gruppe 2, die eine sachliche Verlust-Framing Nachricht erhalten haben.
+Die zweite Hypothese konnte ebenfalls nicht bestätigt werden. Die dramatisierte Verlust-Framing-Nachricht führt nicht zu Verlust an Glaubwürdigkeit und damit Handlungsbereitschaft. Die Probanden der Gruppe 3 zeigen sich im Durchschnitt ähnlich handlungsbereit wie die Probanden der Gruppe 2, die eine sachliche Verlust-Framing-Nachricht erhalten haben.
+
+Die Ergebnisse sind graphisch dargestellt und in \Cref{app:graphs} zu finden.
 
 
 \chapter{Diskussion}
 
-Dieses Kapitel diskutiert die Ergebnisse der Studie im Hinblick auf die aufgestellten Hypothesen. Dazu wird die Signifanz der Ergebnisse betrachtet und die möglichen Gründe für die fehlenden Framing-Effekte erörtert. Die Ergebnisse aus dieser Studie werden daraufhin qualitativ mit bestehenden Forschungsergebnissen verglichen.
+Dieses Kapitel diskutiert die Ergebnisse der Studie im Hinblick auf die aufgestellten Hypothesen. Dazu werden die Signifikanz der Ergebnisse betrachtet und die möglichen Gründe für die fehlenden Framing-Effekte erörtert. Die Ergebnisse aus dieser Studie werden daraufhin qualitativ mit bestehenden Forschungsergebnissen verglichen.
 
 \section{Signifikanz der Ergebnisse}\label{sec:signifikanz}
 
-Die Ergebnisse bestätigen, dass das Framing in keiner Gruppe einen signifikanten Einfluss auf die Risikowahrnehmung und auf die Handlungsbereitschaft hatte. Die Nullhypothese, ist wie folgt formuliert: Alle Gruppendurchschnitte sind gleich. Die Nullhypothese kann über den F-Test nicht abgelehnt werden, da alle p-Werte lagen über dem Signifikanzniveau von 0,05.
+Die Ergebnisse bestätigen, dass das Framing in keiner Gruppe einen signifikanten Einfluss auf die Risikowahrnehmung und auf die Handlungsbereitschaft hatte. Die Nullhypothese ist wie folgt formuliert: Alle Gruppendurchschnitte sind gleich. Über den F-Test kann die Nullhypothese nicht abgelehnt werden, da alle p-Werte über dem Signifikanzniveau von 0,05 liegen.
 
-Wie in \cref{sec:framing_risk} und \cref{sec:framing_action} bereits angedeutet lassen sich in den Ergebnissen zwar Muster erkennen, die Framing-Effekte andeuten, jedoch sind diese nicht statistisch signifikant. Im Rahmen dieser Arbeit können daher keine eindeutigen Schlussfolgerungen gezogen werden.
+Wie in \Cref{sec:framing_risk} und \Cref{sec:framing_action} bereits angedeutet, lassen sich in den Ergebnissen zwar Muster erkennen, die Framing-Effekte andeuten, jedoch sind diese nicht statistisch signifikant. Im Rahmen dieser Arbeit können daher keine eindeutigen Schlussfolgerungen gezogen werden.
 
-Die Gründe liegen möglicherweise in der Stichprobengröße. Eine größere Stichproben könnte dazu führen, dass Ungleichverteilungen zwischen den Gruppen ausgeglichen werden. Von 17 Probanden, die mit 5 von 5 angegeben haben, sehr gut über den Klimawandel informiert zu sein waren 9 in der Gewinn-Framing Gruppe. Die in \cref{sec:framing_action} angesprochene Korrelation zwischen Vorkenntnissen und Handlungsbereitschaft könnte bei dieser starken Ungleichverteilung Einfluss auf die Ergebnisse haben. Solche ungewollten Effekte könnten durch eine größere Stichprobe eliminiert werden.
+Die Gründe liegen möglicherweise in der Stichprobengröße. Eine größere Stichprobe könnte dazu führen, dass Ungleichverteilungen zwischen den Gruppen ausgeglichen werden. Von 17 Probanden, die mit 5 von 5 angegeben haben, sehr gut über den Klimawandel informiert zu sein, waren 9 in der Gewinn-Framing-Gruppe. Die in \Cref{sec:framing_action} angesprochene Korrelation zwischen Vorkenntnissen und Handlungsbereitschaft könnte bei dieser starken Ungleichverteilung Einfluss auf die Ergebnisse haben. Solche ungewollten Effekte könnten durch eine größere Stichprobe eliminiert werden.
 
 Es ist denkbar, dass der Framing-Effekt nicht bei allen Probanden in gleicher Stärke auftritt. Eine größere Stichprobe würde in diesem Zusammenhang auch die absolute Zahl derjenigen erhöhen, die auf den Framing-Effekt reagieren. Zudem könnte eine bereits stark ausgeprägte Einstellung der Probanden zum Klimawandel deren Empfänglichkeit für Framing reduzieren. Die Auswertung der Kontrollvariablen Alter und Stadtgröße legt nahe, dass die Stichprobe insgesamt eine relativ homogene Gruppe bildet. Sollte jedoch die Lebenssituation einzelner Probanden ihre Anfälligkeit für Framing beeinflussen und bestimmte Lebenssituationen in der Stichprobe überrepräsentiert sein, könnte dies dazu beitragen, dass signifikante Framing-Effekte im Gesamtergebnis nicht erkennbar werden.
 
 \section{Vergleich mit Effekten aus der Literatur}
 
-Basierend auf der Prospect Theory hätte das Verlust Framing einen größeren Effekt haben sollen als das Gewinn Framing\cite{tversky1981framing}. So zeigen Studien, dass Verlust-Framing zu einer höheren Risikowahrnehmung führt und die Handlungsbereitschaft erhöht\cite{spence}. In den Ergebnissen dieser Arbeit konnte kein solcher Effekt festgestellt werden.
+Basierend auf der Prospect Theory hätte das Verlust-Framing einen größeren Effekt haben sollen als das Gewinn-Framing~\parencite{tversky1981framing}. So zeigen Studien, dass Verlust-Framing zu einer höheren Risikowahrnehmung führt und die Handlungsbereitschaft erhöht~\parencite{spence}. In den Ergebnissen dieser Arbeit konnte kein solcher Effekt festgestellt werden.
 
-In Bezug auf die zweite Hypothese, dass eine dramatisierte Verlust-Framing Nachricht zu einem Verlust an Glaubwürdigkeit und damit zu einer geringeren Handlungsbereitschaft führt, konnte ebenfalls kein Effekt festgestellt werden. Studien zu diesem Effekt im Bezug auf den Klimawandel deuten an, dass Formulierungen von starker Bedrohung dazu führen, dass Probanden die Glaubwürdigkeit der Nachricht in Frage stellen und sogar negative Folgen ablehnen um kognitive Dissonanz zu vermeiden. Die Ergebnisse dieser Arbeit zeigen keine Effekte dieser Deutlichkeit. Die Durchschnittswerte der Risikowahrnehmung und Handlungsbereitschaft der Probanden der Gruppe 3 liegen sehr nah an denen der Gruppe 2. Zusätzlich zu den in \cref{sec:signifikanz} genanten Gründen, könnte sich diese Beobachtung mit der Formulierung der Framing Nachricht begründen lassen. Möglicherweise hebt sich diese nicht ausreichend von der Verlust-Framing Nachricht der Gruppe 2 ab und erzeugt somit einen ähnlichen Effekt.
+In Bezug auf die zweite Hypothese, dass eine dramatisierte Verlust-Framing-Nachricht zu einem Verlust an Glaubwürdigkeit und damit zu einer geringeren Handlungsbereitschaft führt, konnte ebenfalls kein Effekt festgestellt werden. Studien zu diesem Effekt in Bezug auf den Klimawandel deuten an, dass Formulierungen von starker Bedrohung dazu führen, dass Probanden die Glaubwürdigkeit der Nachricht infrage stellen und sogar negative Folgen ablehnen, um kognitive Dissonanz zu vermeiden. Die Ergebnisse dieser Arbeit zeigen keine Effekte dieser Deutlichkeit. Die Durchschnittswerte der Risikowahrnehmung und Handlungsbereitschaft der Probanden der Gruppe 3 liegen sehr nah an denen der Gruppe 2. Zusätzlich zu den in~\Cref{sec:signifikanz} genannten Gründen könnte sich diese Beobachtung mit der Formulierung der Framing-Nachricht begründen lassen. Möglicherweise hebt sich diese nicht ausreichend von der Verlust-Framing-Nachricht der Gruppe 2 ab und erzeugt somit einen ähnlichen Effekt.
 
 \chapter{Fazit}
-Diese Studie hat untersucht, welchen Effekt Framing auf die Risikowahrnehmung und Handlungsbereitschaft in Bezug auf den Klimawandel hat. Dazu wurden Probanden in drei Gruppen eingeteilt, die jeweils eine Gewinn-Framing Nachricht, eine Verlust-Framing Nachricht oder eine dramatisierte Verlust-Framing Nachricht gelesen haben. Anschließend bewerteten die Probanden ihre Risikowahrnehmung und Handlungsbereitschaft anhand von Thesen.              Die Ergebniss zeigen, dass kein signifikanter Framing-Effekt auf die Risikowahrnehmung und Handlungsbereitschaft festgestellt werden konnte. 
+Diese Studie hat untersucht, welchen Effekt Framing auf die Risikowahrnehmung und Handlungsbereitschaft in Bezug auf den Klimawandel hat. Dazu wurden Probanden in drei Gruppen eingeteilt, die jeweils eine Gewinn-Framing-Nachricht, eine Verlust-Framing-Nachricht oder eine dramatisierte Verlust-Framing-Nachricht gelesen haben. Anschließend bewerteten die Probanden ihre Risikowahrnehmung und Handlungsbereitschaft anhand von Thesen. Die Ergebnisse zeigen, dass kein signifikanter Framing-Effekt auf die Risikowahrnehmung und Handlungsbereitschaft festgestellt werden konnte. 
 
-Die Hypothesen, dass Verlust-Framing zu einer höheren Risikowahrnehmung führt und eine dramatisierte Verlust-Framing Nachricht zu einem Verlust an Glaubwürdigkeit und damit zu einer geringeren Handlungsbereitschaft führt, konnten nicht bestätigt werden. 
-Die zweite Hypothese, die Übertreibung des Verlust-Framings führe zu einem Verlust an Glaubwürdigkeit und damit zu einer geringeren Handlungsbereitschaft, konnte ebenfalls nicht bestätigt werden.
+Die Hypothesen, dass Verlust-Framing zu einer höheren Risikowahrnehmung führt und eine dramatisierte Verlust-Framing-Nachricht zu einem Verlust an Glaubwürdigkeit und damit zu einer geringeren Handlungsbereitschaft führt, konnten nicht bestätigt werden. 
+Hypothese 2, die Übertreibung des Verlust-Framings führe zu einem Verlust an Glaubwürdigkeit und damit zu einer geringeren Handlungsbereitschaft, konnte ebenfalls nicht bestätigt werden.
 Die Ergebnisse dieser Studie decken sich damit nicht mit den Ergebnissen aus der Literatur, die auf signifikante Framing-Effekte hinweisen.
 
-Die Gründe für die fehlenden Framing-Effekte könnten in der Stichprobengröße liegen. Eine größere Stichprobe könnte dazu führen, dass Ungleichverteilungen zwischen den Gruppen ausgeglichen werden und die absolute Zahl derjenigen erhöhen, die auf den Framing-Effekt reagieren. Zudem könnte eine bereits stark ausgeprägte Einstellung der Probanden zum Klimawandel deren Empfänglichkeit für Framing reduzieren. 
+Gründe für die fehlenden Framing-Effekte könnten in der Stichprobengröße liegen. Eine größere Stichprobe könnte dazu führen, dass Ungleichverteilungen zwischen den Gruppen ausgeglichen werden und die absolute Zahl derjenigen erhöht wird, die auf den Framing-Effekt reagieren. Zudem könnte eine bereits stark ausgeprägte Einstellung der Probanden zum Klimawandel deren Empfänglichkeit für Framing reduzieren. 
 
-Des weiteren war die Abfrage der Kontrollvariable Bildungsjahre nicht eindeutig, was die Interpretation der Ergebnisse erschwert.
+Des Weiteren war die Abfrage der Kontrollvariable Bildungsjahre nicht eindeutig, was die Interpretation der Ergebnisse erschwert.
 
 Eine zukünftige Studie könnte eine größere Stichprobe verwenden und die Kontrollvariablen genauer abfragen, um mögliche Einflüsse auf die Ergebnisse zu minimieren.
 
 \newpage
 % -----------------------------------
-\bibliographystyle{apacite}				% bei natbib in deutsch
-\bibliography{./Literatur/quellen}		% Literaturquellen einbinden 
+\chapter*{Literaturverzeichnis}		% Literaturverzeichnis
+\printbibliography{}					% Literaturverzeichnis
 
 \appendix
 
@@ -242,7 +258,7 @@ Wenn wir weiterhin zögern, riskieren wir nicht nur Umweltverluste, sondern auch
 
 \end{quote}
 
-\chapter{Graphen}
+\chapter{Graphen}/\label{app:graphs}
 
 \begin{figure}[H]
   \centering
